@@ -1,0 +1,39 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3>Add a new project to our list</h3>
+  </div>
+  <div class="panel-body">
+    <div>
+      <div>
+        <label>Project Name:</label>
+        <br>
+        <input #newName>
+      </div>
+
+      <div>
+        <label>Project Description:</label>
+        <br>
+        <textarea #newDescription></textarea>
+      </div>
+
+      <div>
+        <label>Enter a target cash goal:</label>
+        <br>
+        <input #newGoal>
+      </div>
+
+      <div>
+        <label>Enter the current ballance, probably $0:</label>
+        <br>
+        <input #newTotalRaised>
+      </div>
+
+      <div>
+        <label>Who is the sponsor for this project?:</label>
+        <br>
+        <input #newSponsor>
+      </div>
+      <button (click)="submitForm(newName.value, newDescription.value, newGoal.value, newTotalRaised.value, newSponsor.value); newName.value=''; newDescription.value='';newTotalRaised.value=''; newSponsor.value=''; newGoal.value='';">Add</button>
+    </div>
+  </div>
+</div>
