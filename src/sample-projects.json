@@ -1,0 +1,24 @@
+
+{ "projects": [{
+    "name": "Father Johns Community Help",
+    "description": "Come hang out with father John as he blesses people, free food with cash donation",
+    "goal": 4000,
+    "totalRaised": 0,
+    "sponsor": "The Church of Chris",
+    "id": "1"
+    },  {
+    "name": "Help you help me",
+    "description": "I need your help, please donate and help you help me",
+    "goal": 1500,
+    "totalRaised": 0,
+    "sponsor": "Jun",
+    "id": "2"
+    }, {
+    "name": "The last donation",
+    "description": "This is for the last donation that you will ever make, it goes to everying!!!",
+    "goal": 1000000000,
+    "totalRaised": 0,
+    "sponsor": "Kimlan",
+    "id": "3"
+    }]
+}
