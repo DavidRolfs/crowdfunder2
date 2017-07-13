@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location } from '@angular/common';
 import { Project } from '../project.model';
@@ -21,7 +21,13 @@ export class ProjectDetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.projectId = urlParameters['id'];
     });
-    this.projectToDisplay = this.projectService.getProjectById(this.projectId);
+    this.projectService.getProjectById(this.projectId).subscribe(dataLastEmittedFromObserver => {
+      this.projectToDisplay = dataLastEmittedFromObserver;
+      //console.log(this.projectToDisplay.totalRaised);
+    })
+  }
+  beginUpdatingTotalRaised(projectUpdateTotal, currentTotal){
+    this.projectService.updateTotalRaised(projectUpdateTotal, currentTotal);
   }
 
 }

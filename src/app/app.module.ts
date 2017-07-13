@@ -12,7 +12,6 @@ import { masterFirebaseConfig } from './api-key';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AdminComponent } from './admin/admin.component';
-import { EditAlbumComponent } from './edit-album/edit-album.component';
 import { EditProjectComponent } from './edit-project/edit-project.component';
 
 export const firebaseConfig = {
@@ -29,7 +28,6 @@ export const firebaseConfig = {
     ProjectsComponent,
     ProjectDetailComponent,
     AdminComponent,
-    EditAlbumComponent,
     EditProjectComponent
   ],
   imports: [

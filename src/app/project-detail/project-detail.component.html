@@ -1,8 +1,13 @@
 
 <div>
-  <h3>project name: {{(projectToDisplay | async)?.name}}</h3>
-  <h4>sponsor: {{(projectToDisplay | async)?.sponsor}}</h4>
-  <h4>goal: {{(projectToDisplay | async)?.goal}}</h4>
-  <h4>total raised: {{(projectToDisplay | async)?.totalRaised}}</h4>
-  <p>description: {{(projectToDisplay | async)?.description}}</p>
+  <h3>project name: {{projectToDisplay?.name}}</h3>
+  <h4>sponsor: {{projectToDisplay?.sponsor}}</h4>
+  <h4>goal: {{projectToDisplay?.goal}}</h4>
+  <h4>total raised: {{projectToDisplay?.totalRaised}}</h4>
+  <p>description: {{projectToDisplay?.description}}</p>
 </div>
+
+  <label>Donate</label>
+  <input [(ngModel)]="donation">
+  <br>
+<button (click)="beginUpdatingTotalRaised(donation, projectToDisplay)">Update</button>

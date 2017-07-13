@@ -36,4 +36,13 @@ export class ProjectService {
     projectEntryInFirebase.remove();
   }
 
+  updateTotalRaised(localUpdateTotalRaised, currentTotal){
+    var currentTotalInFirebase = this.getProjectById(currentTotal.$key);
+    var parsedCurrent = parseInt(currentTotal.totalRaised);
+    var parsedEntry = parseInt(localUpdateTotalRaised);
+    var total = (parsedCurrent + parsedEntry);
+
+    currentTotalInFirebase.update({totalRaised: total});
+  }
+
 }
